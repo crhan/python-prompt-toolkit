@@ -4,13 +4,14 @@ Example of a checkbox-list-based dialog.
 """
 from prompt_toolkit.shortcuts import checkboxlist_dialog, message_dialog
 from prompt_toolkit.styles import Style
+from prompt_toolkit.formatted_text import HTML
 
 results = checkboxlist_dialog(
     title="CheckboxList dialog",
     text="What would you like in your breakfast ?",
     values=[
         ("eggs", "Eggs"),
-        ("bacon", "Bacon"),
+        ("bacon", HTML("<blue>Bacon</blue>")),
         ("croissants", "20 Croissants"),
         ("daily", "The breakfast of the day"),
     ],

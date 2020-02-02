@@ -937,7 +937,7 @@ class Application(Generic[_AppResult]):
         self,
         command: str,
         wait_for_enter: bool = True,
-        display_before_text: str = "",
+        display_before_text: AnyFormattedText = "",
         wait_text: str = "Press ENTER to continue...",
     ) -> None:
         """

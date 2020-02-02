@@ -100,6 +100,8 @@ class Binding:
     def call(self, event: "KeyPressEvent") -> None:
         self.handler(event)
 
+    __call__ = call
+
     def __repr__(self) -> str:
         return "%s(keys=%r, handler=%r)" % (
             self.__class__.__name__,
